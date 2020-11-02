@@ -12,6 +12,7 @@ import AppTextInput from '../components/AppTextInput';
 import AppButton from '../components/AppButton';
 import AppLogo from '../components/AppLogo';
 import AppPicker from '../components/AppPicker';
+import AppDatePicker from '../components/AppDatePicker';
 
 const itemGender =  [
   { label: 'Male', value: 'male' },
@@ -28,22 +29,20 @@ function RegisterScreen(props) {
         <>
         <StatusBar hidden={true} />
       <SafeAreaView style={styles.containner}>
-      <ScrollView style={styles.scrollContainer}>
        <AppLogo></AppLogo>
         <View style={styles.Formcontainner}>
         <ImageBackground resizeMode="stretch" style={styles.background} source={require('../assets/images/backGround.png')}> 
         <AppTextInput name="Full Name" secureTextEntry={false} keyboardType="default"></AppTextInput>
-        <AppTextInput name="Birth Date" secureTextEntry={false} keyboardType="default"></AppTextInput>
+        <AppDatePicker></AppDatePicker>
         <AppTextInput name="Mobile" maxLength={11} secureTextEntry={false} keyboardType="numeric"></AppTextInput>
         <AppPicker name="Governorate" items={itemGovernorate}></AppPicker>
         <AppPicker name="Gender"  items={itemGender}></AppPicker>
         <AppTextInput name="Address" secureTextEntry={false} keyboardType="default"></AppTextInput>
         <AppTextInput name="Password" secureTextEntry={true} keyboardType="default"></AppTextInput>
         <AppTextInput name="Confirm Password"  secureTextEntry={true} keyboardType="default"></AppTextInput>
-        <AppButton title="Register"></AppButton>
+        <AppButton pb="1%"pt="0.5%" title="Register"></AppButton>
        </ImageBackground>      
        </View>
-       </ScrollView>
       </SafeAreaView> 
       </>
     );
@@ -54,11 +53,11 @@ const styles = StyleSheet.create({
         backgroundColor:color.primary,
         flexDirection:"column",
         alignItems:"center",
-        paddingVertical:"9%"
+        paddingVertical:"3%"
       },
      Formcontainner:{
        width:"100%",
-       paddingTop:"9%"
+       paddingTop:"3%"
      },
      background:{
      alignItems:"center",
@@ -68,3 +67,4 @@ const styles = StyleSheet.create({
      }
 })
 export default RegisterScreen;
+

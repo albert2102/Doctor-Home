@@ -15,26 +15,30 @@ import AppButton from '../components/AppButton';
 import AppLogo from '../components/AppLogo';
 import AppTextInputWithIcon from '../components/AppTextInputWithIcon';
 import AppRegisterButton from '../components/AppRegisterButton';
+import {strings,isRTL } from '../utiles/language'
+console.log('====================================');
+console.log(isRTL);
+console.log('====================================');
 function LoginScreen(props) {
     return (
         <>
         <StatusBar hidden={true} />
       <SafeAreaView style={styles.containner}>
-      <ScrollView style={styles.scrollContainer}>
        <AppLogo></AppLogo>
        <View style={styles.hintRegisterView}>
-       <Text style={styles.hintRegisterText}>Enter your rgistered mobile number and password</Text>
+       <Text style={styles.hintRegisterText}>{strings('hint')}</Text>
        </View>
         <View style={styles.Formcontainner}>
         <ImageBackground resizeMode="stretch" style={styles.background} source={require('../assets/images/backGround.png')}> 
-        <AppTextInputWithIcon name="Mobile Number" maxLength={11} secureTextEntry={false} keyboardType="numeric" iconName="screen-smartphone"></AppTextInputWithIcon>
+        <AppTextInputWithIcon m="7%" style={styles.mobile} name="mobilenumber" maxLength={11} secureTextEntry={false} keyboardType="numeric" iconName="screen-smartphone"></AppTextInputWithIcon>
         <AppTextInputWithIcon name="Password"  secureTextEntry={true}  iconName="lock"></AppTextInputWithIcon>
-        <AppButton m="9%" title="LOGIN" fontSize={23}></AppButton>
-        <Text style={styles.orText}>OR</Text>
-        <AppRegisterButton></AppRegisterButton>
+        <AppButton m="7%" title="LOGIN" fontSize={23}></AppButton>
+        <View style={{alignItems:"center",width:"100%",height:"33%"}}>
+        <Text style={styles.orText}>{strings("or")}</Text>
+        <AppRegisterButton ></AppRegisterButton>
+        </View>
        </ImageBackground>      
        </View>
-       </ScrollView>
       </SafeAreaView> 
       </>
     );
@@ -49,29 +53,30 @@ const styles = StyleSheet.create({
       },
      Formcontainner:{
        width:"100%",
-       paddingTop:"4%"
      },
      background:{
      alignItems:"center",
+     paddingVertical:"7%",
      },
-     scrollContainer:{
-       width:"100%",
-    },
+    
      orText:{
          fontSize:27,
          fontFamily:"Myriad-Roman-Regular",
          color:color.iconColor,
-         marginTop:"10%"
+         marginTop:"7%"
      },
      hintRegisterView:{
-        alignItems:"center"
+        alignItems:"center",
+        width:"100%",
+        marginVertical:"1%"
      },
      hintRegisterText:{
          color:color.secodery,
          fontFamily:"MuktaMahee-Medium",
          fontSize:20,
          textAlign:"center",
-         width:"70%",
-     }
+         width:"72%"
+     },
+   
 })
 export default LoginScreen;

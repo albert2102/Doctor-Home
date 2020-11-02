@@ -1,7 +1,7 @@
 import React from 'react';
 import { TextInput,StyleSheet, View } from 'react-native';
 import color from '../config/colors'
-function AppTextInput({name,keyboardType,secureTextEntry,maxLength=25,m="5%"}) {
+function AppTextInput({name,keyboardType,secureTextEntry,maxLength=25,m="2%"}) {
     return (
      <View style={[styles.container,{marginBottom:m}]}>
      <TextInput clearButtonMode="always" maxLength={maxLength} secureTextEntry={secureTextEntry} keyboardType={keyboardType} placeholder={name} style={styles.input}>

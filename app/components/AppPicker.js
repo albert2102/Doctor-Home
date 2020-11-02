@@ -3,7 +3,7 @@ import { TextInput, StyleSheet, View } from 'react-native';
 import color from '../config/colors'
 import RNPickerSelect from 'react-native-picker-select';
 
-function AppPicker({ name, m = "5%" ,items}) {
+function AppPicker({ name, m = "2%" ,items}) {
     console.log(name);
     return (
         <View style={[styles.container, { marginBottom: m }]}>

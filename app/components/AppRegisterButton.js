@@ -1,12 +1,14 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import { Text, TouchableOpacity,StyleSheet} from 'react-native';
+import { Text, TouchableOpacity,StyleSheet, View, TouchableWithoutFeedback} from 'react-native';
 import color from '../config/colors'
 function AppRegisterButton() {
    const navigation =  useNavigation();
     return (
         <TouchableOpacity style={styles.button} onPress={()=>{navigation.push("Register")}}>
-            <Text style={styles.buttonTitle}>Register Now</Text>
+           <View>
+           <Text style={styles.buttonTitle}>Register Now</Text>
+               </View> 
         </TouchableOpacity>
     );
 }
@@ -19,8 +21,9 @@ const styles = StyleSheet.create({
         borderColor:color.iconColor,
         alignItems:"center",
         paddingVertical:"2%",
-        marginVertical:"5%"
-    },
+        position:'absolute',
+        bottom:0
+   },
     buttonTitle:{
         fontFamily:"Bahij_TheSansArabic-Plain",
         color:color.green,

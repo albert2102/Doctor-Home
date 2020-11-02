@@ -7,6 +7,8 @@ import File from 'react-native-vector-icons/MaterialCommunityIcons';
 import LoginScreen from '../screens/LoginScreen';
 import TabStyle from './NewTabStyling';
 import AuthNavigator from './AuthNavigation';
+import {strings } from '../utiles/language';
+import RegisterScreen from '../screens/RegisterScreen';
 
 const Tap = createBottomTabNavigator();
 const AppNavigator = ()=>(
@@ -31,11 +33,11 @@ const AppNavigator = ()=>(
   }}
 
   >
-    <Tap.Screen name="My Requests" options={{tabBarIcon:({size,color})=><File name="file-document-edit-outline" size={size} color={color}/>}} component={AuthNavigator}/>
-    <Tap.Screen name="Offerss"options={{tabBarIcon:({size,color})=><Icon name="settings" size={size} color={color}/>}} component={LoginScreen}/>
-    <Tap.Screen name="Home" options={{tabBarIcon:({size,color})=><Icon name="home" size={size} color={color}/>}}  component={LoginScreen}/>
-    <Tap.Screen name="Contact" options={{tabBarIcon:({size,color})=><Icon name="phone-call" size={size} color={color}/>}} component={LoginScreen}/>
-    <Tap.Screen name="More" options={{tabBarIcon:({size,color})=><More name="ellipsis-horizontal-outline" size={size} color={color}/>}} component={LoginScreen}/>
+    <Tap.Screen name={strings("myRequests")} options={{tabBarIcon:({size,color})=><File name="file-document-edit-outline" size={size} color={color}/>}} component={AuthNavigator}/>
+    <Tap.Screen name={strings("Offers")}options={{tabBarIcon:({size,color})=><Icon name="settings" size={size} color={color}/>}} component={RegisterScreen}/>
+    <Tap.Screen name={strings("Home")} options={{tabBarIcon:({size,color})=><Icon name="home" size={size} color={color}/>}}  component={LoginScreen}/>
+    <Tap.Screen name={strings("Contact")} options={{tabBarIcon:({size,color})=><Icon name="phone-call" size={size} color={color}/>}} component={LoginScreen}/>
+    <Tap.Screen name={strings("More")} options={{tabBarIcon:({size,color})=><More name="ellipsis-horizontal-outline" size={size} color={color}/>}} component={LoginScreen}/>
   </Tap.Navigator>
 );
 

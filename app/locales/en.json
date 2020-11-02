@@ -1,0 +1,15 @@
+{
+   "hint":"Enter your rgistered mobile number and password",
+  "mobilenumber": "Mobile Number",
+  "Password":"Password",
+  "LOGIN":"LOGIN",
+  "or":"OR",
+  "registerNow":"Register Now",
+  "Home":"Home",
+  "More":"More",
+  "Contact":"Contact",
+  "Offers":"Offers",
+  "myRequests":"My Requestes", 
+  
+  "Register":"Register"
+}
