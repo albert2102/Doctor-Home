@@ -14,6 +14,8 @@ import {NavigationContainer} from '@react-navigation/native'
 
 import AuthNavigator from './app/navigation/AuthNavigation';
 import AppNavigator from './app/navigation/AppNavigator';
+import HomeScreen from './app/screens/HomeScreen';
+import ServicesScreen from './app/screens/ServicesScreen';
 const Login =()=>(
   <LoginScreen></LoginScreen>
 );
@@ -26,8 +28,8 @@ const Register = () =>(
 const App = () => {
   return (
     <>
-    <NavigationContainer>
-      <AppNavigator/>
+   <NavigationContainer>
+      <AppNavigator/> 
     </NavigationContainer>
     </>
   );

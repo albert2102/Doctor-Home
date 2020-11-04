@@ -12,6 +12,7 @@ function AppTextInput({name,keyboardType,secureTextEntry,maxLength=25,m="2%"}) {
 const styles = StyleSheet.create({
     container:{
         width:"80%",
+        flexBasis:"7.5%",
         borderRadius:10,
         backgroundColor:color.white,
         paddingLeft:"4%"

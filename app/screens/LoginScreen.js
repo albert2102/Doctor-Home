@@ -10,16 +10,16 @@ import {
     ImageBackground,
   } from 'react-native';
   import color from '../config/colors';
-import AppTextInput from '../components/AppTextInput';
 import AppButton from '../components/AppButton';
 import AppLogo from '../components/AppLogo';
 import AppTextInputWithIcon from '../components/AppTextInputWithIcon';
 import AppRegisterButton from '../components/AppRegisterButton';
 import {strings,isRTL } from '../utiles/language'
+import AppNavigator from '../navigation/AppNavigator';
 console.log('====================================');
 console.log(isRTL);
 console.log('====================================');
-function LoginScreen(props) {
+function LoginScreen({navigation}) {
     return (
         <>
         <StatusBar hidden={true} />
@@ -35,7 +35,7 @@ function LoginScreen(props) {
         <AppButton m="7%" title="LOGIN" fontSize={23}></AppButton>
         <View style={{alignItems:"center",width:"100%",height:"33%"}}>
         <Text style={styles.orText}>{strings("or")}</Text>
-        <AppRegisterButton ></AppRegisterButton>
+        <AppRegisterButton onPress={navigation.push("Register")} ></AppRegisterButton>
         </View>
        </ImageBackground>      
        </View>
@@ -44,39 +44,40 @@ function LoginScreen(props) {
     );
 }
 const styles = StyleSheet.create({
-    containner: {
-        flex: 1,
-        backgroundColor:color.primary,
-        flexDirection:"column",
-        alignItems:"center",
-        paddingVertical:"9%"
-      },
-     Formcontainner:{
-       width:"100%",
-     },
-     background:{
-     alignItems:"center",
-     paddingVertical:"7%",
-     },
-    
-     orText:{
-         fontSize:27,
-         fontFamily:"Myriad-Roman-Regular",
-         color:color.iconColor,
-         marginTop:"7%"
-     },
-     hintRegisterView:{
-        alignItems:"center",
-        width:"100%",
-        marginVertical:"1%"
-     },
-     hintRegisterText:{
-         color:color.secodery,
-         fontFamily:"MuktaMahee-Medium",
-         fontSize:20,
-         textAlign:"center",
-         width:"72%"
-     },
-   
+  containner: {
+      flex: 1,
+      backgroundColor:color.primary,
+      flexDirection:"column",
+      alignItems:"center",
+      paddingVertical:"9%"
+    },
+   Formcontainner:{
+     width:"100%",
+   },
+   background:{
+   alignItems:"center",
+   paddingVertical:"7%",
+   },
+  
+   orText:{
+       fontSize:27,
+       fontFamily:"Myriad-Roman-Regular",
+       color:color.iconColor,
+       marginTop:"7%"
+   },
+   hintRegisterView:{
+      alignItems:"center",
+      width:"100%",
+      marginVertical:"1%"
+   },
+   hintRegisterText:{
+       color:color.secodery,
+       fontFamily:"MuktaMahee-Medium",
+       fontSize:20,
+       textAlign:"center",
+       width:"72%"
+   },
+ 
 })
+
 export default LoginScreen;

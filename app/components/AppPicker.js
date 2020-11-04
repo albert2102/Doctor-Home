@@ -23,7 +23,8 @@ const styles = StyleSheet.create({
         width: "80%",
         borderRadius: 10,
         backgroundColor: color.white,
-        paddingLeft: "3%"
+        paddingLeft: "3%",
+        flexBasis:"7.5%"
     },
     input: {
         backgroundColor: color.white,

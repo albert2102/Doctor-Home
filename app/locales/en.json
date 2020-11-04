@@ -11,5 +11,9 @@
   "Offers":"Offers",
   "myRequests":"My Requestes", 
   
-  "Register":"Register"
+  "Register":"Register",
+  "Active":"Active",
+  "ResendTheCode":"Resend The Code",
+  "hintconfimCode":"Please enter the four digits that sent to your mobile number to verify it",
+  "ServicesTitle":"All Services"
 }

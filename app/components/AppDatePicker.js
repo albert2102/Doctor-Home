@@ -51,7 +51,9 @@ export default class AppDatePicker extends Component {
         backgroundColor:color.white,
         paddingLeft:"4%",
         paddingVertical:"1%",
-        marginBottom:"2%"
+        marginBottom:"2%",
+        flexBasis:"7.5%",
+
     },
     picker:{
         borderColor:color.white,

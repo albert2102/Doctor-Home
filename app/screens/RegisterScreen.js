@@ -13,6 +13,7 @@ import AppButton from '../components/AppButton';
 import AppLogo from '../components/AppLogo';
 import AppPicker from '../components/AppPicker';
 import AppDatePicker from '../components/AppDatePicker';
+import { useNavigation } from '@react-navigation/native';
 
 const itemGender =  [
   { label: 'Male', value: 'male' },
@@ -24,7 +25,7 @@ const itemGovernorate =[
   { label: 'Alex', value: 'alex' },
   { label: 'Assuit', value: 'assuit' },
 ]
-function RegisterScreen(props) {
+function RegisterScreen({navigation}) {
     return (
         <>
         <StatusBar hidden={true} />
@@ -40,7 +41,7 @@ function RegisterScreen(props) {
         <AppTextInput name="Address" secureTextEntry={false} keyboardType="default"></AppTextInput>
         <AppTextInput name="Password" secureTextEntry={true} keyboardType="default"></AppTextInput>
         <AppTextInput name="Confirm Password"  secureTextEntry={true} keyboardType="default"></AppTextInput>
-        <AppButton pb="1%"pt="0.5%" title="Register"></AppButton>
+        <AppButton  pb="1.5%"pt="1%" onPress={()=>{navigation.push("ConfirmCode")}} title="Register"></AppButton>
        </ImageBackground>      
        </View>
       </SafeAreaView> 
